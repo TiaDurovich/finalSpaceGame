@@ -1,3 +1,4 @@
+// This function is responsible for randomly placing the coins throughout the scene
 
 function placeCoins(scene) {
 
@@ -13,6 +14,8 @@ function placeCoins(scene) {
 
 	return theCoins;
 
+	// Function that uses a variable array to randomly place the coin objects
+	// This function is executed in the placeCoins function above
 	function getRandomPositions() {
 
 		var noCoins = 1 + Math.floor((Math.random() * 4));	
