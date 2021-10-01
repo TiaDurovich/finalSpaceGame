@@ -1,5 +1,8 @@
+<!-- Entry point of game-->
+
 <!DOCTYPE html>
 <html>
+	<!-- Linking CSS page & Google Fonts text, naming the webpage, scaling the game to fit the users screen-->
 	<head>
 		<meta charset=utf-8>
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -12,16 +15,17 @@
 	</head>
 
 	<body>
+		<!-- Styling the initial scoreboard (when the webpage loads)-->
 		<div style="font-family: Space Mono;" id="scoreboard">HEALTH: 3 &emsp; COINS: 0</div>
 		<div id="gameover"></div>
 		<canvas id="canvas"></canvas>
 		
-	    <!-- CDN Link to Three.js -->
+	    <!-- CDN Links to Three.js, OBJ loader & GLTF loader -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.js"></script>
 		<script src="https://unpkg.com/three@0.87.0/examples/js/loaders/OBJLoader.js"> </script>
 		<script src="https://unpkg.com/three@0.87.0/examples/js/loaders/GLTFLoader.js"> </script>
 		
-	    <!-- Link all other js files below -->
+	    <!-- Links to all js files -->
 	    <script src="js/components/Coin.js"></script>
 	    <script src="js/placeCoins.js"></script>
 	    <script src="js/components/Missile.js"></script>
