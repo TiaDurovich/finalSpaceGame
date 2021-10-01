@@ -1,3 +1,5 @@
+// This function removes the missiles from the scene when they come into contact with an enemy object
+
 function deleteMissiles(theMissiles) {
 
     var j = theMissiles.length;
