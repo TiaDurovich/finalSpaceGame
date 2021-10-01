@@ -1,3 +1,5 @@
+// This function generates the object enemy.gltf within the scene
+// This file is linked to placeEnemy.js, containing a function that randomly places the objects genertaed here
 
 function Enemy(scene, x, z) {
 	
@@ -11,6 +13,7 @@ function Enemy(scene, x, z) {
 			{
 				this.model = obj.scene;
 
+				// Rotation, size & positioning of the object
 				this.model.rotation.y = -Math.PI / 2;
 				this.model.rotation.x = Math.PI / 24;
 
@@ -20,7 +23,8 @@ function Enemy(scene, x, z) {
 				scene.add(this.model);
 			}).bind(this)
 		)
-
+	
+	// If the enemy object gits hit by a missile, it is removed from the scene 
 	this.destroy = function() {
 		scene.remove(this.model);
 	}
