@@ -1,3 +1,4 @@
+// This function is responsible for randomly placing the enemy objects throughout the scene
 
 function placeEnemies(scene) {
 
@@ -13,6 +14,8 @@ function placeEnemies(scene) {
 
 	return theEnemies;
 	
+	// Function that uses a variable array to randomly place the enemy objects
+	// This function is executed in the placeEnemies function above
 	function getRandomPositions() {
 
 		var noEnemies = 1 + Math.floor((Math.random() * 3));	
