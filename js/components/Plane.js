@@ -1,3 +1,4 @@
+// Responsible for the functioning & generation of the plane (spaceship that the users move)
 
 function Plane(scene) {
 	
@@ -24,7 +25,7 @@ function Plane(scene) {
 					}
 				)
 
-				// rotating, scaling down the plane model
+				// Rotating & scaling down the plane model to fit the scene
 				this.model.rotation.x = Math.PI / 12;
 				this.model.position.z = -10;
 				this.model.scale.set(0.01, 0.01, 0.009);
@@ -36,11 +37,13 @@ function Plane(scene) {
 			}).bind(this)
 		);
 
-	
+	// Movement of the plane along the z-axis (3D) at a constant speed
 	this.update = function() {
 		this.model.position.z -= 0.4;
 	}
 
+	// Conditons to control the movement of the plane using the W[87], S[83], D[68] & A[65] keys according to their respective keymap numbers
+	// Notice that the movement of the plane matches that of the camera, this ensures that the users view/perspective is that of the plane
 	this.handleInput = function(keyMap, camera) {
 		
 		if (keyMap[87]) {
@@ -67,6 +70,7 @@ function Plane(scene) {
 		}
 	}
 
+	// Variables to account for the velocity of the missile upon launch
 	this.launchMissile = function() {
 
         var x = this.model.position.x;
