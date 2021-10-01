@@ -1,3 +1,5 @@
+// This function generates a 3D sphere (leveraged from Three.js) of a specific radius and colour to act as the coin in the game
+// This file is linked to placeCoins.js, containing a function that randomly places the objects created here
 
 function Coin(scene, x, z) {
 
@@ -7,6 +9,7 @@ function Coin(scene, x, z) {
 	this.model = new THREE.Mesh( geometry, material );	
 	this.model.position.set(x, 0, z);
 	
+	// Adding the coin objects to the scene
 	scene.add(this.model);
 
 	this.destroy = function() {
