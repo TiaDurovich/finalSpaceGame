@@ -5,6 +5,7 @@ html, body
 	height: 100%; 
 	overflow: hidden;
 }
+/* Styling for the scoreboard */
 #scoreboard {
 	position: absolute;
 	top: 10px;
@@ -15,6 +16,7 @@ html, body
 	color: white;
 	display:block;
 }
+/* Styling for the gameover display (when health <1 */
 #gameover {
 	z-index: 100;
 	color: white;
