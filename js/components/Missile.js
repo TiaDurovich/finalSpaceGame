@@ -1,3 +1,4 @@
+// This function is responsible for generating the missile.gltf object in the scene
 
 function Missile(scene, x, z) {
 	
@@ -11,6 +12,7 @@ function Missile(scene, x, z) {
 			{
 				this.model = obj.scene;
 
+				// Rotation, positioning & scaling of the missile.gltf object
 				this.model.rotation.x = -Math.PI/2;
 
 				this.model.position.set(x, -0.05, z);
@@ -19,11 +21,14 @@ function Missile(scene, x, z) {
 				scene.add(this.model);
 			}).bind(this)
 		)
-
+	
+	// Velocity of missile across the z-axis (3D) at a constant speed 
+	// The velocity must be faster than that of the plane & camera so that the missile can reach the enemy before the plane
 	this.update = function() {
 		this.model.position.z -= 2.1;
 	}
 
+	// Upon "destroying"/coming into contact with an enemy object, the missile will be removed from the scene
 	this.destroy = function() {
 		scene.remove(this.model);
 	}
