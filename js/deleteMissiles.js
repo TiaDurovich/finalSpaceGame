@@ -1,4 +1,4 @@
-// This function removes the missiles from the scene when they come into contact with an enemy object
+// This function removes the missiles from the scene once they reach a certain distance along the z-axis
 
 function deleteMissiles(theMissiles) {
 
